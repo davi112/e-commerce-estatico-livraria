@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Halpert Bookstore</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/c54c3fd6be.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+		crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+
+
+		<img id="logo" src="./assets/logo.png" alt="">
+
+
+		<span id="welcome">Bem-Vindo !</span>
+
+		<div class="pesquisa">
+			<input type="text" id="search" placeholder="Pesquisar por um produto, categoria, mais vendido ou Editora" />
+			<button class="btn-pesquisa"><i class="fa fa-search"></i> Pesquisar</button>
+		</div>
+
+		<nav class="menu-principal">
+			<ul>
+				<li><a href="#">Entrar</a></li>
+				<li><a href="#">Registrar</a></li>
+				<li><a href="#">Minha Conta</a></li>
+				<li><a href="#">Rastrear Pedido</a></li>
+			</ul>
+		</nav>
+
+		<div class="more-info">
+			<p>Pagamento na entrega | 30 dias de garantia</p>
+			<p>Atendimento ao cliente 24 h <b>1800 00 11 22</b></p>
+		</div>
+
+		<a class="cart" href=""><i class="fa-solid fa-cart-shopping fa-lg"></i>
+			<p>Carrinho</p>
+		</a>
+
+	</header>
+
+	<section class="produtos">
+		<aside class="quick">
+			<p id="title"><b>Busca Rápida - Escolha o Produto</b></p>
+			<p>Encontre o produto correto com o preço correto</p>
+
+			<formc class="form-pesquisa">
+				<select class="">
+					<option selected>Tipo</option>
+					<option value="1">Capa Dura</option>
+					<option value="2">Box</option>
+					<option value="3">Livro de Bolso</option>
+				</select>
+				<select class="">
+					<option selected>Editora</option>
+					<option value="1">Martins Fontes</option>
+					<option value="2">Rocco</option>
+					<option value="3">Pipoca e Nanquim</option>
+				</select>
+				<select class="">
+					<option selected>Categoria</option>
+					<option value="1">Fantasia</option>
+					<option value="2">Ficção Científica</option>
+					<option value="3">Política</option>
+				</select>
+				<div id="range-info">
+					<label for="from">$</label>
+					<input name="from" id="from" type="text" placeholder="From"> <label for=""></label>
+					<label for="to">$</label>
+					<input name="from" id="to" type="text" placeholder="To">
+				</div>
+				<button class="btn-pesquisa"><i class="fa fa-search"></i> Pesquisar</button>
+				</form>
+		</aside>
+
+		<div id="carouselExampleIndicators" class="carousel slide">
+			<ol class="carousel-indicators">
+				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></li>
+				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="./assets/673f093c-9644-4a82-afcf-468757ed0094.822e8dee67b99277846c62b050a24c75.jpeg"
+						class="d-block w-25 m-auto" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="./assets/91sjnBZTDKL.jpg" class="d-block w-25 m-auto" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="./assets/91yXw2O0j6L.jpg" class="d-block w-25 m-auto" alt="...">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</section>
+
+	<main>
+		<div id="container" class="container">
+			<div class="row">
+				<div class="card col-md-3">
+					<img src="./assets/200x200.png" alt="">
+					<a class="d-block" href="#">Detalhes do Produto</a>
+					<div class="rating d-flex mt-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+							class="fa-regular fa-star"></i><span>(6)</span>
+					</div>
+				</div>
+
+				<div class="card col-md-3">
+					<img src="./assets/200x200.png" alt="">
+					<a class="d-block" href="#">Detalhes do Produto</a>
+					<div class="rating d-flex mt-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><span>(3)</span>
+					</div>
+					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
+				</div>
+
+				<div class="card col-md-3">
+					<img src="./assets/200x200.png" alt="">
+					<a class="d-block" href="#">Detalhes do Produto</a>
+					<div class="rating d-flex mt-2">
+						<i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+							class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+							class="fa-regular fa-star"></i><span>(1)</span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="card col-md-3">
+					<img src="./assets/200x200.png" alt="">
+					<a class="d-block" href="#">Detalhes do Produto</a>
+					<div class="rating d-flex mt-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+							class="fa-regular fa-star"></i><span>(6)</span>
+					</div>
+				</div>
+
+				<div class="card col-md-3">
+					<img src="./assets/200x200.png" alt="">
+					<a class="d-block" href="#">Detalhes do Produto</a>
+					<div class="rating d-flex mt-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><span>(3)</span>
+					</div>
+					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
+				</div>
+
+				<div class="card col-md-3">
+					<img src="./assets/200x200.png" alt="">
+					<a class="d-block" href="#">Detalhes do Produto</a>
+					<div class="rating d-flex mt-2">
+						<i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+							class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+							class="fa-regular fa-star"></i><span>(1)</span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="card col-md-3">
+					<img src="./assets/200x200.png" alt="">
+					<a class="d-block" href="#">Detalhes do Produto</a>
+					<div class="rating d-flex mt-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+							class="fa-regular fa-star"></i><span>(6)</span>
+					</div>
+				</div>
+
+				<div class="card col-md-3">
+					<img src="./assets/200x200.png" alt="">
+					<a class="d-block" href="#">Detalhes do Produto</a>
+					<div class="rating d-flex mt-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><span>(3)</span>
+					</div>
+					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
+				</div>
+
+				<div class="card col-md-3">
+					<img src="./assets/200x200.png" alt="">
+					<a class="d-block" href="#">Detalhes do Produto</a>
+					<div class="rating d-flex mt-2">
+						<i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+							class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+							class="fa-regular fa-star"></i><span>(1)</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<aside class="reviewed">-->
+			<div class="destaques">
+				<p id="itens-title">Itens mais vistos</p>
+
+				<div class="destaque">
+					<img src="./assets/200x200.png" alt="wewe">
+
+					<a href="#">Descrição</a>
+
+					<div class="rating d-flex m-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><span>(3)</span>
+					</div>
+
+					<p>R$ 999.0</p>
+				</div>
+				<div class="destaque">
+					<img src="./assets/200x200.png" alt="wewe">
+
+					<a href="#">Descrição</a>
+
+					<div class="rating d-flex m-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><span>(3)</span>
+					</div>
+
+					<p>R$ 999.0</p>
+				</div>
+				<div class="destaque">
+					<img src="./assets/200x200.png" alt="wewe">
+
+					<a href="#">Descrição</a>
+
+					<div class="rating d-flex m-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><span>(3)</span>
+					</div>
+
+					<p>R$ 999.0</p>
+				</div>
+				<div class="destaque">
+					<img src="./assets/200x200.png" alt="wewe">
+
+					<a href="#">Descrição</a>
+
+					<div class="rating d-flex m-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><span>(3)</span>
+					</div>
+
+					<p>R$ 999.0</p>
+				</div>
+				<div class="destaque">
+					<img src="./assets/200x200.png" alt="wewe">
+
+					<a href="#">Descrição</a>
+
+					<div class="rating d-flex m-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><span>(3)</span>
+					</div>
+
+					<p>R$ 999.0</p>
+				</div>
+				<div class="destaque">
+					<img src="./assets/200x200.png" alt="wewe">
+
+					<a href="#">Descrição</a>
+
+					<div class="rating d-flex m-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><span>(3)</span>
+					</div>
+
+					<p>R$ 999.0</p>
+				</div>
+				<div class="destaque">
+					<img src="./assets/200x200.png" alt="wewe">
+
+					<a href="#">Descrição</a>
+
+					<div class="rating d-flex m-2">
+						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+							class="fa-solid fa-star"></i><span>(3)</span>
+					</div>
+
+					<p>R$ 999.0</p>
+					<button id="more">Ver mais</button>
+				</div>
+			</div>
+			<div class="news">
+				<h5><b>Newsletter</b></h5>
+				<p>Se inscreva para receber notícias diárias!</b></p>
+				<input type="email" id="email" placeholder="seunome@melhoremail.com">
+				<button id="more">Inscrever!</button>
+			</div>	
+		<!--</aside>-->
+	</main>
+
+	<footer id="footer">
+		<section class="rodape">
+			<div>
+				<h6>Formas de pagamento</h6>
+			</div>
+			<div>
+				<h6>Acesso Rápido</h6>
+				<div class="links">
+					<a class="d-block" href="#">Ajuda</a>
+					<a class="d-block" href="#">Política de Entrega</a>
+					<a class="d-block"href="#">Cancelamentos e Devoluções</a>
+					<a class="d-block" href="#">FAQ</a>
+					<a class="d-block" href="#">Política de Privacidade</a>
+					<a class="d-block" href="#">Isenção de responsabilidade</a>	
+				</div>
+			</div>
+			<div>
+				<h6>Redes Sociais</h6>
+				<div class="social-media-icons">
+					<a href=""><i class="fa-brands fa-instagram fa-lg"></i></a>
+					<a href=""><i class="fa-brands fa-tiktok fa-lg"></i></a>
+					<a href=""><i class="fa-brands fa-twitter fa-lg"></i></a>
+				</div>
+			</div>
+			<div>
+				<h6>Fale Conosco</h6>
+				<p>Rua Alameda dos Anjos, nº 375</p>
+				<p>Bairro Guarani, CEP: 31840-710</p>
+				<p>Belo Horizonte - MG</p>
+				<i class="fa fa-envelope"></i><a href="mailto:davimartinsfreitas@gmail.com"> davimartinsfreitas@gmail.com</a>
+				<i class="fa fa-phone"></i><p class="d-inline"> (31) 9 9727-0845</p>
+			</div>
+		</section>
+		<div id="copyright">
+			<span>&copy 2023 Halpert Bookstore</span>
+		</div>
+	</footer>
+</body>
+
+</html>
