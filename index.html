@@ -19,15 +19,16 @@
 <body>
 	<header>
 
-
-		<img id="logo" src="./assets/logo.png" alt="">
-
-
-		<span id="welcome">Bem-Vindo !</span>
-
+		<div>
+			<img id="logo" src="./assets/logo.png" alt="">
+		</div>
 		<div class="pesquisa">
-			<input type="text" id="search" placeholder="Pesquisar por um produto, categoria, mais vendido ou Editora" />
-			<button class="btn-pesquisa"><i class="fa fa-search"></i> Pesquisar</button>
+			<span>Bem-Vindo !</span>
+			<form action="">
+				<input type="text" id="search"
+					placeholder="Pesquisar por um produto, categoria, mais vendido ou Editora" />
+				<button class="btn-pesquisa"><i class="fa fa-search"></i> Pesquisar</button>
+			</form>
 		</div>
 
 		<nav class="menu-principal">
@@ -39,14 +40,14 @@
 			</ul>
 		</nav>
 
-		<div class="more-info">
-			<p>Pagamento na entrega | 30 dias de garantia</p>
-			<p>Atendimento ao cliente 24 h <b>1800 00 11 22</b></p>
+		<div class="d-flex more-info">
+			<p>Pagamento na entrega  | 30 dias de garantia<br>
+			   Atendimento ao cliente 24h <b> 1800 00 11 22</b></p>
+			<a class="cart" href="">
+				<i class="fa-solid fa-cart-shopping fa-lg"></i>
+				<p>Carrinho</p>
+			</a>
 		</div>
-
-		<a class="cart" href=""><i class="fa-solid fa-cart-shopping fa-lg"></i>
-			<p>Carrinho</p>
-		</a>
 
 	</header>
 
@@ -92,8 +93,7 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="https://source.unsplash.com/random/1500x500?sig=1"
-						class="d-block w-100 m-auto" alt="...">
+					<img src="https://source.unsplash.com/random/1500x500?sig=1" class="d-block w-100 m-auto" alt="...">
 				</div>
 				<div class="carousel-item">
 					<img src="https://source.unsplash.com/random/1500x500?sig=2" class="d-block w-100 m-auto" alt="...">
@@ -321,10 +321,10 @@
 
 	<footer id="footer">
 		<section class="rodape">
-			<div>
+			<div class="footer-item">
 				<h6>Formas de pagamento</h6>
 			</div>
-			<div>
+			<div class="footer-item">
 				<h6>Acesso Rápido</h6>
 				<div class="links">
 					<a class="d-block" href="#">Ajuda</a>
@@ -335,7 +335,7 @@
 					<a class="d-block" href="#">Isenção de responsabilidade</a>
 				</div>
 			</div>
-			<div>
+			<div class="footer-item">
 				<h6>Redes Sociais</h6>
 				<div class="social-media-icons">
 					<a href=""><i class="fa-brands fa-instagram fa-lg"></i></a>
