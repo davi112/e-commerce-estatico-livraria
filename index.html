@@ -27,7 +27,6 @@
 			font-family: "Montserrat", sans-serif;
 		}
 	</style>
-
 </head>
 
 <body>
@@ -36,9 +35,8 @@
 		<div>
 			<img id="logo" src="./assets/logo.png" alt="">
 		</div>
-
 		<div class="pesquisa">
-			<span>Bem-Vindo !</span>
+			<span style="color: white">Bem-Vindo !</span>
 			<form class="header-pesquisa">
 				<input type="text" id="search"
 					placeholder="Pesquisar por um produto, categoria, mais vendido ou Editora" />
@@ -69,39 +67,27 @@
 				</a>
 			</div>
 		</div>
+		
+	
 	</header>
+	
+	<div id="author-info"style="text-align:center">
+		<h5><b style="color: teal">Aluno: </b>Davi Martins Freitas de Oliveira Fonseca</h5>
+		<h5><b style="color: teal">Curso: </b>Bacharelado em Sistemas de Informação</h5>
+		<h5><b style="color: teal">Matrícula: </b>824209</h5>
+	</div>
 
 	<section class="produtos">
+		
 		<aside class="quick-search">
-			<p id="title"><b>Busca Rápida - Escolha o Produto</b></p>
+			<p id="title"><b>Busca Rápida - Filtre por categoria</b></p>
 			<p>Encontre o produto correto com o preço correto</p>
 
 			<form class="form-pesquisa">
-				<select class="">
-					<option selected>Tipo</option>
-					<option value="1">Capa Dura</option>
-					<option value="2">Box</option>
-					<option value="3">Livro de Bolso</option>
+				<select id="select-category" class="">
 				</select>
-				<select class="">
-					<option selected>Editora</option>
-					<option value="1">Martins Fontes</option>
-					<option value="2">Rocco</option>
-					<option value="3">Pipoca e Nanquim</option>
-				</select>
-				<select class="">
-					<option selected>Categoria</option>
-					<option value="1">Fantasia</option>
-					<option value="2">Ficção Científica</option>
-					<option value="3">Política</option>
-				</select>
-				<div id="range-info">
-					<label for="from">$</label>
-					<input name="from" id="from" type="text" placeholder="Mínimo"> <label for=""></label>
-					<label for="to">$</label>
-					<input name="from" id="to" type="text" placeholder="Máximo">
-				</div>
-				<button class="btn-pesquisa"><i class="fa fa-search"></i> Pesquisar</button>
+				<button type="button" id="search-button" class="btn-pesquisa"><i class="fa fa-search"></i> Pesquisar</button>
+				<button type="button" id="remove-button" class="btn-pesquisa">Remover filtro</button>
 			</form>
 		</aside>
 
@@ -137,117 +123,11 @@
 
 	<main>
 		<div id="container" class="container">
-			<div class="row">
-				<div class="card col-lg-3 col-md-4 col-xs-12">
-					<img src="./assets/2001.png" alt="">
-					<a class="d-block" href="#">Detalhes do Produto</a>
-					
-					<div class="rating d-flex mt-2">
-						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-							class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
-							class="fa-regular fa-star"></i><span>(6)</span>
-					</div>
-					<p class="book-tag">2001 - Uma Odisséia no Espaço - Arthur C. Clarke</p>
-					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
-				</div>
-
-				<div class="card col-lg-3 col-md-4 col-xs-12">
-					<img src="./assets/cantigapassaroserpentes.png" alt="">
-					<a class="d-block" href="#">Detalhes do Produto</a>
-					<div class="rating d-flex mt-2">
-						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-							class="fa-solid fa-star"></i><span>(3)</span>
-					</div>
-					<p class="book-tag">A Cantiga dos Passáros e Serpentes - Suzanne Collins</p>
-					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
-				</div>
-
-				<div class="card col-lg-3 col-md-4 col-xs-12">
-					<img src="./assets/cathingfire.png" alt="">
-					<a class="d-block" href="#">Detalhes do Produto</a>
-					<div class="rating d-flex mt-2">
-						<i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
-							class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-							class="fa-regular fa-star"></i><span>(1)</span>
-					</div>
-					<p class="book-tag">Jogos Vorazes: Em Chamas - Suzanne Collins</p>
-					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
-				</div>
+			<div id="row1" class="row">
 			</div>
-			<div class="row">
-				<div class="card col-lg-3 col-md-4 col-xs-12">
-					<img src="./assets/hungergames.png" alt="">
-					<a class="d-block" href="#">Detalhes do Produto</a>
-					<div class="rating d-flex mt-2">
-						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-							class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
-							class="fa-regular fa-star"></i><span>(6)</span>
-					</div>
-					<p class="book-tag">Jogos Vorazes: Suzanne Collins</p>
-					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
-				</div>
-
-				<div class="card col-lg-3 col-md-4 col-xs-12">
-					<img src="./assets/mockingjay.png" alt="">
-					<a class="d-block" href="#">Detalhes do Produto</a>
-					<div class="rating d-flex mt-2">
-						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-							class="fa-solid fa-star"></i><span>(3)</span>
-					</div>
-					<p class="book-tag">Jogos Vorazes: A Esperança - Suzanne Collins</p>
-					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
-				</div>
-
-				<div class="card col-lg-3 col-md-4 col-xs-12">
-					<img src="./assets/dune.png" alt="">
-					<a class="d-block" href="#">Detalhes do Produto</a>
-					<div class="rating d-flex mt-2">
-						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-							class="fa-regular fa-star"></i><span>(1)</span>
-					</div>
-					<p class="book-tag">Duna - Frank Herbert</p>
-					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
-				</div>
+			<div id="row2" class="row">
 			</div>
-			<div class="row">
-				<div class="card col-lg-3 col-md-4 col-xs-12">
-					<img src="./assets/foundation.png" alt="">
-					<a class="d-block" href="#">Detalhes do Produto</a>
-					<div class="rating d-flex mt-2">
-						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-							class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
-							class="fa-regular fa-star"></i><span>(6)</span>
-					</div>
-					<p class="book-tag">Fundação - Isaac Asimov</p>
-					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
-				</div>
-
-				<div class="card col-lg-3 col-md-4 col-xs-12">
-					<img src="./assets/howdoesthefascismwork.png" alt="">
-					<a class="d-block" href="#">Detalhes do Produto</a>
-					<div class="rating d-flex mt-2">
-						<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-							class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-							class="fa-solid fa-star"></i><span>(3)</span>
-					</div>
-					<p class="book-tag">Como Funciona o Fascismo - Jason Stanley</p>
-					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
-				</div>
-
-				<div class="card col-lg-3 col-md-4 col-xs-12">
-					<img src="./assets/cleancode.png" alt="">
-					<a class="d-block" href="#">Detalhes do Produto</a>
-					<div class="rating d-flex mt-2">
-						<i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
-							class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-							class="fa-regular fa-star"></i><span>(1)</span>
-					</div>
-					<p class="book-tag">Código Limpo - Robert C. Martin</p>
-					<p class="price-tag">R$: 49.90<span>R$69.90<s> 14% </s>OFF</span></p>
-				</div>
+			<div id="row3" class="row">
 			</div>
 		</div>
 
@@ -427,6 +307,7 @@
 			<span>&copy 2023 Halpert Bookstore</span>
 		</section>
 	</footer>
+	<script src="index.js"></script>
 </body>
 
 </html>

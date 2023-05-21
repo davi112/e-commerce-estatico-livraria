@@ -12,7 +12,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1800px;
-    background-image: linear-gradient(lightgray, whitesmoke);
+    background-color: teal;
 }
 
 #menuToggle {
@@ -98,6 +98,7 @@ header {
 
 .menu-principal ul li a {
     text-decoration: none;
+    color: whitesmoke;
 }
 
 .more-info {
@@ -188,6 +189,7 @@ header {
 
 .card img {
     padding-top: 10px;
+    height: 200px;
 }
 
 .card:hover{
@@ -377,9 +379,32 @@ footer div h6 {
 }
 /*rodape - fim*/
 
+#author-info{
+    margin-top: 10px;
+}
+
+#detalhe_produto{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    border: 1px solid teal;
+}
+
+#detalhe_produto div img{
+    margin: 35px;
+}
+
+#detalhe_produto div img{
+    height: 200px;
+}
+
+#main-detail{
+   width: 900px;
+   margin: 0 auto;
+}
+
 /*media query menu mobile - inicio*/
 @media only screen and (max-width: 600px) and (max-width: 1023px) {
-
     .more-info p {
         display: none;
     }
