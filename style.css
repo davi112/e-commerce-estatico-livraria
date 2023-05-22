@@ -282,7 +282,6 @@ main {
 #more {
     background-color: lightslategray;
     border: none;
-    width: 100px;
     padding: 5px;
     text-align: center;
     font-size: 11px;
@@ -328,16 +327,16 @@ main {
     gap: 10%;
     height: 300px;
     padding-top: 50px;
-    background-color: lightgray;
+    background-color: teal;
     font-weight: bold;
 }
 
 #copyright {
     display: inline-block;
     width: 100%;
-    background-color: gray;
+    background-color: turquoise;
     text-align: center;
-    color: whitesmoke;
+    color: teal;
 }
 
 .footer-item {
@@ -351,11 +350,16 @@ footer div h6 {
 .links a {
     font-size: 12px;
     text-decoration: none;
+    color: whitesmoke;
+}
+
+.links a:hover {
+    color: darkgrey;
 }
 
 .social-media-icons i {
     cursor: pointer;
-    color: darkslategray;
+    color: whitesmoke;
     transition: color 0.3s;
 }
 
@@ -370,11 +374,12 @@ footer div h6 {
 .fale-conosco p {
     margin-bottom: 0px;
     font-size: 80%;
-    color: darkslategray;
+    color: whitesmoke;
 }
 
 .fale-conosco a {
     text-decoration: none;
+    color: whitesmoke;
     font-size: 90%;
 }
 /*rodape - fim*/
@@ -385,26 +390,28 @@ footer div h6 {
 
 #detalhe_produto{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 10px;
     border: 1px solid teal;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
-#detalhe_produto div img{
-    margin: 35px;
-}
-
-#detalhe_produto div img{
-    height: 200px;
-}
-
-#main-detail{
-   width: 900px;
+#detalhe_produto div{
    margin: 0 auto;
+}
+
+#detalhe_produto div img{
+    width: 200px;
+    height: 200px;
 }
 
 /*media query menu mobile - inicio*/
 @media only screen and (max-width: 600px) and (max-width: 1023px) {
+
+    .card img {
+       width: 150px;
+    }
     .more-info p {
         display: none;
     }
@@ -506,6 +513,9 @@ footer div h6 {
 
 /*media query telas um pouco maiores - inicio*/
 @media only screen and (max-width: 1024px) {
+    #detalhe_produto div{
+        margin-top: 150px;
+    }
 
     header .pesquisa {
         display: none;

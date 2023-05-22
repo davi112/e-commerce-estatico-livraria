@@ -1,9 +1,11 @@
+/*Pagando o id passado pela URl como parametro e chamada ao metodo de construir o html*/
 window.onload = () => {
     let param = new URLSearchParams(window.location.search);
     let productId = param.get("id");
     fillDetails(productId)
 }
 
+/*Construindo o html com os detalhes obtidos a partir da requisicao do produto*/
 function fillDetails(productId){
     url = `https://fakestoreapi.com/products/${productId}`
     fetch(url)
@@ -13,7 +15,7 @@ function fillDetails(productId){
         rating_icons = ''
         integerRate = Math.round(produto.rating.rate);
         for(let i = 0; i < integerRate; i++){
-            rating_icons += '<i class="fa-solid fa-star"></i>'
+            rating_icons += '<i style="color: yellow" class="fa-solid fa-star"></i>'
         }
 
         for(let i = 0; i < 5 -  integerRate; i++){

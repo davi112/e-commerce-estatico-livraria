@@ -39,8 +39,8 @@
 			<span style="color: white">Bem-Vindo !</span>
 			<form class="header-pesquisa">
 				<input type="text" id="search"
-					placeholder="Pesquisar por um produto, categoria, mais vendido ou Editora" />
-				<button class="btn-pesquisa"><i class="fa fa-search"></i> Pesquisar</button>
+					placeholder="Pesquisar por um produto" />
+				<button type="button" id="btn-search" class="btn-pesquisa"><i class="fa fa-search"></i> Pesquisar</button>
 			</form>
 		</div>
 
@@ -86,39 +86,10 @@
 			<form class="form-pesquisa">
 				<select id="select-category" class="">
 				</select>
-				<button type="button" id="search-button" class="btn-pesquisa"><i class="fa fa-search"></i> Pesquisar</button>
+				<button type="button" id="filter-button" class="btn-pesquisa"><i class="fa fa-search"></i> Pesquisar</button>
 				<button type="button" id="remove-button" class="btn-pesquisa">Remover filtro</button>
 			</form>
 		</aside>
-
-		<div id="carouselExampleIndicators" class="carousel slide">
-			<ol class="carousel-indicators">
-				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></li>
-				<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="assets/colecao.png" class="d-block w-100 m-auto" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="assets/comics.png" class="d-block w-100 m-auto" alt="...">
-				</div>
-				<div class="carousel-item">
-					<img src="assets/misterio.png" class="d-block w-100 m-auto" alt="...">
-				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-				data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-				data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
-		</div>
 	</section>
 
 	<main>
@@ -242,12 +213,6 @@
 
 					<button id="more">Ver mais</button>
 				</div>
-			</div>
-			<div class="news">
-				<h5><b>Newsletter</b></h5>
-				<p>Se inscreva para receber notícias diárias!</b></p>
-				<input type="email" id="email" placeholder="seunome@melhoremail.com">
-				<button id="more">Inscrever!</button>
 			</div>
 		</aside>
 	</main>
