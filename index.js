@@ -19,6 +19,7 @@ function retrieve_products() {
         .then(res => res.json())
         .then(data => {
             product_cards = '';
+            most_viewed_products = '';
             for (let i = 0; i < data.length; i++) {
                 let produto = data[i];
 
@@ -30,6 +31,13 @@ function retrieve_products() {
                         <p class="book-tag">${produto.title}</p>
                         <p class="price-tag">R$:${produto.price}</p>
                     </div>`
+                
+                most_viewed_products += `
+                    <div class="destaque">
+                        <img src="${produto.image}" alt="">
+                        <a href="detalhe.html?id=${produto.id}">Descrição</a>
+                        <p>$:${produto.price}</p>
+					</div>`
 
                 if (i == 2) {
                     product_cards = setProductsPerRow("row1", product_cards)
@@ -39,6 +47,7 @@ function retrieve_products() {
                     product_cards = setProductsPerRow("row3", product_cards)
                 }
             }
+            document.getElementById('most-viewed-container').innerHTML = most_viewed_products;
         });
 }
 
