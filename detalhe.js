@@ -7,7 +7,7 @@ window.onload = () => {
 
 /*Construindo o html com os detalhes obtidos a partir da requisicao do produto*/
 function fillDetails(productId){
-    url = `https://fakestoreapi.com/products/${productId}`
+    url = `http://diwserver.vps.webdock.cloud:8765/products/${productId}`
     fetch(url)
     .then(res => res.json())
     .then(produto => {

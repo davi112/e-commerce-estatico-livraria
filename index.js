@@ -7,23 +7,27 @@ var previous_search_size = 0;
 window.onload = () => {
     retrieve_products();
     retrieve_categories();
-    window.document.getElementById('filter-button').addEventListener('click', filterByCategory)
-    window.document.getElementById('remove-button').addEventListener('click', removeFilter)
+    window.document.getElementById('filter-button').addEventListener('click', filter_by_category)
+    window.document.getElementById('remove-button').addEventListener('click', remove_filter)
     window.document.getElementById('search').addEventListener('input', search_items)
     window.document.getElementById('btn-search').addEventListener('click', search_items)
 }
 
-/*Retornando todos os produtos e construindo o html com os valores*/
+/*Retornando todos os produtos e construindo o html com os valores
+.then(function(res){
+    res.json()
+})*/
+
 function retrieve_products() {
-    fetch('https://fakestoreapi.com/products?limit=9')
+    fetch('http://diwserver.vps.webdock.cloud:8765/products?limit=9')
         .then(res => res.json())
         .then(data => {
-            product_cards = '';
-            most_viewed_products = '';
-            for (let i = 0; i < data.length; i++) {
-                let produto = data[i];
+            productCards = '';
+            mostViewedProducts = '';
+            for (let i = 0; i < data.products.length; i++) {
+                let produto = data.products[i];
 
-                product_cards +=
+                productCards +=
                     `<div class="p-card card col-lg-3 col-md-4 col-xs-12">
                         <img src=${produto.image} alt="">
                         <a class="d-block" href="detalhe.html?id=${produto.id}/">Detalhes do Produto</a>
@@ -32,7 +36,7 @@ function retrieve_products() {
                         <p class="price-tag">R$:${produto.price}</p>
                     </div>`
                 
-                most_viewed_products += `
+                mostViewedProducts += `
                     <div class="destaque">
                         <img src="${produto.image}" alt="">
                         <a href="detalhe.html?id=${produto.id}">Descrição</a>
@@ -40,39 +44,39 @@ function retrieve_products() {
 					</div>`
 
                 if (i == 2) {
-                    product_cards = setProductsPerRow("row1", product_cards)
+                    productCards = set_products_per_row("row1", productCards)
                 } else if (i == 5) {
-                    product_cards = setProductsPerRow("row2", product_cards)
+                    productCards = set_products_per_row("row2", productCards)
                 } else if (i == 8) {
-                    product_cards = setProductsPerRow("row3", product_cards)
+                    productCards = set_products_per_row("row3", productCards)
                 }
             }
-            document.getElementById('most-viewed-container').innerHTML = most_viewed_products;
+            document.getElementById('most-viewed-container').innerHTML = mostViewedProducts;
         });
 }
 
 /*Define em qual linha do boostrap entrara cada produto*/
-function setProductsPerRow(rowId, cards) {
+function set_products_per_row(rowId, cards) {
     document.getElementById(rowId).innerHTML = cards;
     cards = ''
     return cards
 }
 
 /*Filtra os produtos pela categoria, desabilitando os botoes quando necessario*/
-function filterByCategory() {
+function filter_by_category() {
     window.document.getElementById('remove-button').style.display = 'inline-block';
-    search_button = window.document.getElementById('filter-button');
-    search_button.disabled = true;
-    search_button.style.opacity = 0.3;
+    searchButton = window.document.getElementById('filter-button');
+    searchButton.disabled = true;
+    searchButton.style.opacity = 0.3;
 
-    category_combo = window.document.getElementById('select-category');
-    category_combo.disabled = true;
+    categoryCombo = window.document.getElementById('select-category');
+    categoryCombo.disabled = true;
 
-    var selected_category = category_combo.value;
-    var product_cards = window.document.getElementsByClassName('card');
+    var selectedCategory = categoryCombo.value;
+    var productCards = window.document.getElementsByClassName('card');
 
-    for (let i = 0; i < product_cards.length; i++) {
-        var produto = product_cards[i];
+    for (let i = 0; i < productCards.length; i++) {
+        var produto = productCards[i];
         var categoria = produto.getElementsByClassName('category').item(0).textContent;
 
         if (categoria != selected_category) {
@@ -82,7 +86,7 @@ function filterByCategory() {
 }
 
 /*Remove todos os filtros de categoria*/
-function removeFilter() {
+function remove_filter() {
     var product_cards = window.document.getElementsByClassName('card');
     window.document.getElementById('select-category').disabled = false;
 
@@ -98,7 +102,7 @@ function removeFilter() {
 /*Retorna todas as categorias e constroi html com os valores*/
 function retrieve_categories() {
     window.document.getElementById('remove-button').style.display = 'none';
-    fetch('https://fakestoreapi.com/products/categories')
+    fetch('http://diwserver.vps.webdock.cloud:8765/products/categories')
         .then(res => res.json())
         .then(categorias => {
             select_category = window.document.getElementById('select-category');
